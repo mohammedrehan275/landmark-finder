@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Landmark Finder',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of the application.
         primaryColor: Color(0xFF0C5DF8),
