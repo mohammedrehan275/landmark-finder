@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landmark_finder/widgets/activity.dart';
+import 'package:landmark_finder/widgets/top_picks.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -38,7 +39,14 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
+        SizedBox(
+          height: 25.0,
+        ),
         Activity(),
+        SizedBox(
+          height: 25.0,
+        ),
+        TopPicks(),
       ]),
     ));
   }
