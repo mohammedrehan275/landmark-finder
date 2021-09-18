@@ -57,183 +57,240 @@ class _LandmarkScreenState extends State<LandmarkScreen> {
               ],
             ),
           ),
-          Positioned(
-            bottom: 0.0,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              padding: EdgeInsets.all(30.0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+          DraggableScrollableSheet(
+            initialChildSize: 0.55,
+            minChildSize: 0.55,
+            maxChildSize: 0.9,
+            builder: (BuildContext context, ScrollController scrollController) {
+              return Stack(
                 children: <Widget>[
-                  Text(
-                    'The National Art Center',
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                    '7 Chome-22-2 Roppongi, Minato City, Tokyo 106-8558, Japan',
-                    style: TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
                   Container(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 10.0,
-                      horizontal: 20.0,
-                    ),
+                    width: MediaQuery.of(context).size.width,
+                    padding: EdgeInsets.all(30.0),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        15.0,
-                      ),
-                      border: Border.all(
-                        color: Colors.grey,
-                      ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[
-                        Column(
+                    child: ListView.builder(
+                      controller: scrollController,
+                      itemCount: 1,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.all(10.0),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15.0),
-                                color: Color(0xFF9bb3ba),
-                              ),
-                              child: Icon(
-                                Icons.star_border,
-                                size: 20.0,
-                                color: Colors.black26,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 8.0,
-                            ),
                             Text(
-                              '28 C',
+                              'The National Art Center',
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                             SizedBox(
-                              height: 5.0,
+                              height: 10.0,
                             ),
                             Text(
-                              'raining',
+                              '7 Chome-22-2 Roppongi, Minato City, Tokyo 106-8558, Japan',
                               style: TextStyle(
                                 fontSize: 16.0,
                               ),
                             ),
-                          ],
-                        ),
-                        Column(
-                          children: <Widget>[
+                            SizedBox(
+                              height: 20.0,
+                            ),
                             Container(
-                              padding: EdgeInsets.all(10.0),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15.0),
-                                color: Color(0xFF9bb3ba),
+                              padding: EdgeInsets.symmetric(
+                                vertical: 10.0,
+                                horizontal: 20.0,
                               ),
-                              child: Icon(
-                                Icons.star_border,
-                                size: 20.0,
-                                color: Colors.black26,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(
+                                  15.0,
+                                ),
+                                border: Border.all(
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: <Widget>[
+                                  Column(
+                                    children: <Widget>[
+                                      Container(
+                                        padding: EdgeInsets.all(10.0),
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
+                                          color: Color(0xFF9bb3ba),
+                                        ),
+                                        child: Icon(
+                                          Icons.star_border,
+                                          size: 20.0,
+                                          color: Colors.black26,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 8.0,
+                                      ),
+                                      Text(
+                                        '28 C',
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 5.0,
+                                      ),
+                                      Text(
+                                        'raining',
+                                        style: TextStyle(
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: <Widget>[
+                                      Container(
+                                        padding: EdgeInsets.all(10.0),
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
+                                          color: Color(0xFF9bb3ba),
+                                        ),
+                                        child: Icon(
+                                          Icons.star_border,
+                                          size: 20.0,
+                                          color: Colors.black26,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 8.0,
+                                      ),
+                                      Text(
+                                        '28 C',
+                                        style: TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 5.0,
+                                      ),
+                                      Text(
+                                        'raining',
+                                        style: TextStyle(
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: <Widget>[
+                                      Container(
+                                        padding: EdgeInsets.all(10.0),
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
+                                          color: Color(0xFF9bb3ba),
+                                        ),
+                                        child: Icon(
+                                          Icons.star_border,
+                                          size: 20.0,
+                                          color: Colors.black26,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 8.0,
+                                      ),
+                                      Text(
+                                        '28 C',
+                                        style: TextStyle(
+                                          fontSize: 17.0,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 5.0,
+                                      ),
+                                      Text(
+                                        'raining',
+                                        style: TextStyle(
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
                             ),
                             SizedBox(
-                              height: 8.0,
+                              height: 20.0,
                             ),
                             Text(
-                              '28 C',
+                              'History of the museum',
                               style: TextStyle(
+                                fontWeight: FontWeight.w600,
                                 fontSize: 18.0,
-                                fontWeight: FontWeight.w600,
                               ),
                             ),
                             SizedBox(
-                              height: 5.0,
+                              height: 15.0,
                             ),
                             Text(
-                              'raining',
+                              'The National Art Center is a museum in roppongi, Minato, Tokyo, Japan.',
                               style: TextStyle(
                                 fontSize: 16.0,
                               ),
                             ),
                           ],
-                        ),
-                        Column(
-                          children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.all(10.0),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15.0),
-                                color: Color(0xFF9bb3ba),
-                              ),
-                              child: Icon(
-                                Icons.star_border,
-                                size: 20.0,
-                                color: Colors.black26,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 8.0,
-                            ),
-                            Text(
-                              '28 C',
-                              style: TextStyle(
-                                fontSize: 17.0,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              'raining',
-                              style: TextStyle(
-                                fontSize: 16.0,
-                              ),
+                        );
+                      },
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 20.0,
+                    left: 20.0,
+                    right: 20.0,
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints.tightFor(
+                          width: MediaQuery.of(context).size.width),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          boxShadow: <BoxShadow>[
+                            BoxShadow(
+                              color: Colors.blue.withOpacity(0.1),
+                              blurRadius: 1,
+                              offset: Offset(0, 5),
                             ),
                           ],
                         ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  Text(
-                    'History of the museum',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18.0,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15.0,
-                  ),
-                  Text(
-                    'The National Art Center is a museum in roppongi, Minato, Tokyo, Japan.',
-                    style: TextStyle(
-                      fontSize: 16.0,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Buy a ticket'),
+                          style: ElevatedButton.styleFrom(
+                            primary: Theme.of(context).primaryColor,
+                            padding: EdgeInsets.symmetric(
+                              vertical: 20.0,
+                              horizontal: 50.0,
+                            ),
+                            textStyle: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 1.5,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
-              ),
-            ),
+              );
+            },
           ),
         ],
       ),
